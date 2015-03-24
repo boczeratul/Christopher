@@ -15,7 +15,8 @@ Book a seat at [RAW Restaurant](http://www.raw.com.tw/indexContent.aspx?Language
 - [Selenium ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/)
 
 ### Start selenium server
-First you have to put the ChromeDriver executable to your $PATH `/usr/local/bin`
+First you have to put the ChromeDriver executable to your $PATH `/usr/local/bin`  
+Then start the selenium server by
 ```bash
 $ java -jar SELENIUM_STAND_ALONE.jar
 ```
