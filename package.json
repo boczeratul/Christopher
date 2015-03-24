@@ -20,6 +20,6 @@
         "url": "git@github.com:boczeratul/RAW-booking.git#master"
     },
     "scripts": {
-        "run": "protractor-batch-runner tests/spec/protractor-batch-conf.js"
+        "booking": "grunt booking"
     }
 }
