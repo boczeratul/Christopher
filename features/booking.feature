@@ -15,4 +15,11 @@ Feature: RAW Booking
     And I write "李玄" in "TextBox_FName"
     And I write "boczeratul@gmail.com" in "TextBox_Email"
     And I write "0939686300" in "TextBox_PNumber"
+    And I wait for "2" seconds
+    And I write "李玄" in "TextBox_PName"
+    And I write "0939686300" in "TextBox_PTel"
+    And I write "boczeratul@gmail.com" in "TextBox_PEMail"
+    And I choose option "Card" from "DropDownList_Payment" dropdown
+    And I click "1" for "RadioButtonList_InvoiceType" radio
+    And I click "LinkButton_Send" button
     Then I should wait for "5" seconds

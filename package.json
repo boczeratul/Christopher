@@ -7,7 +7,6 @@
         "grunt-cli": "~0.1",
         "grunt-protractor-runner": "~1.2.1",
         "protractor": "~1.7.0",
-        "protractor-batch-runner": "0.0.x",
         "protractor-reporter": "~0.1.5",
         "protractor-utils": "~0.3.11"
     },

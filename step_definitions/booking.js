@@ -32,18 +32,19 @@ var steps = function() {
   });
 
   this.When(/^I click "([^"]*)" button$/, function (buttonName, callback) {
-    element(by.css('#'+buttonName)).click();
-    callback();
+    element(by.css('#'+buttonName)).click().then(callback);
   });
 
   this.When(/^I choose option "([^"]*)" from "([^"]*)" dropdown$/, function (inputOption, dropdownName, callback) {
     element(by.css('select[name="' + dropdownName + '"]')).click();
-    element(by.css('option[value="' + inputOption + '"]')).click();
-    callback();
+    element(by.css('option[value="' + inputOption + '"]')).click().then(callback);
+  });
+
+  this.When(/^I click "([^"]*)" for "([^"]*)" radio$/, function (inputOption, radioName, callback) {
+    element(by.css('input[name="' + dropdownName + '"][value="' + inputOption + '"]')).click().then(callback);
   });
 
   this.When(/^I wait for "([^"]*)" seconds$/, function (waitTime, callback) {
-    console.log(1000 * waitTime);
     browser.sleep(1000 * waitTime);
     callback();
   });
