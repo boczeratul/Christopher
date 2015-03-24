@@ -12,12 +12,12 @@
         "protractor-utils": "~0.3.11"
     },
     "description": "Automatic booking for RAW",
-    "name": "RAW-booking",
+    "name": "Christopher",
     "version": "1.0.0",
     "repository": {
         "revision": "e171d38653f1aa1710b8b03106d747e547f64d1d",
         "type": "git",
-        "url": "git@github.com:boczeratul/RAW-booking.git#master"
+        "url": "git@github.com:boczeratul/Christopher.git#master"
     },
     "scripts": {
         "booking": "grunt booking"
