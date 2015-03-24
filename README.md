@@ -11,5 +11,5 @@ $ grunt booking
 ```
 
 ### Dependencies
-- [protractor](http://angular.github.io/protractor/#/)
-- [selenium](http://docs.seleniumhq.org/)
+- [protractor](http://angular.github.io/protractor/#/) an end-to-end functional test framework
+- [selenium](http://docs.seleniumhq.org/) web-driver for browser manipulation
