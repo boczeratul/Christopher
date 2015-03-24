@@ -4,7 +4,7 @@
 > -Alan Turing, _The Imitation Game_
 
 ### Purpose
-Book a seat at RAW Restaurant, with *style*
+Book a seat at [RAW Restaurant](http://www.raw.com.tw/indexContent.aspx?Language=ch#5thPage), with *style*
 
 ### Clone and run the scripts
 ```bash
