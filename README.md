@@ -8,7 +8,7 @@ Book a seat at RAW Restaurant, with *style*
 
 ### Clone and run the scripts
 ```bash
-$ git clone git@github.com:boczeratul/Christopher.git && cd RAW-booking
+$ git clone git@github.com:boczeratul/Christopher.git && cd Christopher
 $ npm install
 $ grunt booking
 ```
