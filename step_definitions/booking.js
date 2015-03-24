@@ -31,19 +31,6 @@ var steps = function() {
     });
   });
 
-  this.Then(/^I should see some "([^"]*)"s$/, function (elementName, callback) {
-    element.all(by.css('.'+elementName)).then(function(elements) {
-      expect(elements.length).to.be.not.empty;
-      callback();
-    });
-  });
-
-  this.Given(/^I have not logged in$/, function (callback) {
-    // var username = element(by.css('a.username'));
-    // expect(username.getAttribute("innerHTML")).to.be.not.equal('Someone');
-    callback();
-  });
-
   this.When(/^I write "([^"]*)" in "([^"]*)"$/, function (inputText, inputName, callback) {
     element(by.css('.'+inputName)).sendKeys(inputText);
     callback();
@@ -53,14 +40,6 @@ var steps = function() {
     browser.sleep(2000);
     element(by.css('#'+buttonName)).click();
     callback();
-  });
-
-  this.Then(/^I should be redirected to "([^"]*)" page$/, function (pageName, callback) {
-    browser.sleep(2000);
-    browser.getCurrentUrl().then(function(url){
-      expect(url).to.have.string(pages[pageName]);
-      callback();
-    });
   });
 
 };
