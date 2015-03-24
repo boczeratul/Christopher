@@ -1,14 +1,14 @@
 {
     "dependencies": {
-        "cucumber": "~0.4.4",
-        "grunt": "~0.4.0",
-        "grunt-cli": "~0.1",
+        "cucumber": "~0.4.8",
+        "grunt": "~0.4.5",
+        "grunt-cli": "~0.1.13",
         "grunt-protractor-runner": "~1.2.1",
         "protractor": "~1.7.0"
     },
     "description": "Automatic booking for RAW",
     "name": "Christopher",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "repository": {
         "revision": "e171d38653f1aa1710b8b03106d747e547f64d1d",
         "type": "git",
