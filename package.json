@@ -1,0 +1,25 @@
+{
+    "dependencies": {
+        "chai": "~1.10.0",
+        "chai-as-promised": "~4.1.1",
+        "cucumber": "~0.4.4",
+        "grunt": "~0.4.0",
+        "grunt-cli": "~0.1",
+        "grunt-protractor-runner": "~1.2.1",
+        "protractor": "~1.7.0",
+        "protractor-batch-runner": "0.0.x",
+        "protractor-reporter": "~0.1.5",
+        "protractor-utils": "~0.3.11"
+    },
+    "description": "Automatic booking for RAW",
+    "name": "RAW-booking",
+    "version": "1.0.0",
+    "repository": {
+        "revision": "e171d38653f1aa1710b8b03106d747e547f64d1d",
+        "type": "git",
+        "url": "git@github.com:boczeratul/RAW-booking.git#master"
+    },
+    "scripts": {
+        "run": "protractor-batch-runner tests/spec/protractor-batch-conf.js"
+    }
+}
