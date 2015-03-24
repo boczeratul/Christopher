@@ -7,7 +7,7 @@ Feature: RAW Booking
     Given I am on "home" page
     Then I should see "superContainer" div
 
-  # Scenario: Book a seat
-  #   Given I am on "booking" page
-  #   When I click "view-comments" button
-  #   Then I should see some "comment"s
+  Scenario: Book a seat
+    Given I am on "booking" page
+    When I click "view-comments" button
+    Then I should see some "comment"s
