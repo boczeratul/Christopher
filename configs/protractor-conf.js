@@ -7,7 +7,7 @@ exports.config = {
         '../features'
     ],
     capabilities: {
-        browserName: 'firefox',
+        browserName: 'chrome',
         version: 'latest'
     },
     cucumberOpts: {

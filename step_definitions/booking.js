@@ -19,9 +19,33 @@ var steps = function() {
 
   this.Given(/^I am on "([^"]*)" page$/, function (pageName, callback) {
     browser.ignoreSynchronization = true; // prevent AngularJS checking
+    browser.manage().window().maximize();
     browser.get(pages[pageName]).then(function () {
+      browser.sleep(5000);
       callback();
     });
+  });
+
+  this.When(/^I write "([^"]*)" in "([^"]*)"$/, function (inputText, inputName, callback) {
+    element(by.css('input[name='+inputName+']')).clear();
+    element(by.css('input[name='+inputName+']')).sendKeys(inputText).then(callback);
+  });
+
+  this.When(/^I click "([^"]*)" button$/, function (buttonName, callback) {
+    element(by.css('#'+buttonName)).click();
+    callback();
+  });
+
+  this.When(/^I choose option "([^"]*)" from "([^"]*)" dropdown$/, function (inputOption, dropdownName, callback) {
+    element(by.css('select[name="' + dropdownName + '"]')).click();
+    element(by.css('option[value="' + inputOption + '"]')).click();
+    callback();
+  });
+
+  this.When(/^I wait for "([^"]*)" seconds$/, function (waitTime, callback) {
+    console.log(1000 * waitTime);
+    browser.sleep(1000 * waitTime);
+    callback();
   });
 
   this.Then(/^I should see "([^"]*)" div$/, function (appletName, callback) {
@@ -31,14 +55,8 @@ var steps = function() {
     });
   });
 
-  this.When(/^I write "([^"]*)" in "([^"]*)"$/, function (inputText, inputName, callback) {
-    element(by.css('.'+inputName)).sendKeys(inputText);
-    callback();
-  });
-
-  this.When(/^I click "([^"]*)" button$/, function (buttonName, callback) {
-    browser.sleep(2000);
-    element(by.css('#'+buttonName)).click();
+  this.Then(/^I should wait for "([^"]*)" seconds$/, function (waitTime, callback) {
+    browser.sleep(1000 * waitTime);
     callback();
   });
 
