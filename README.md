@@ -10,7 +10,7 @@ Book a seat at RAW Restaurant, with *style*
 ```bash
 $ git clone git@github.com:boczeratul/Christopher.git && cd Christopher
 $ npm install
-$ grunt booking
+$ npm run booking
 ```
 
 ### Dependencies
