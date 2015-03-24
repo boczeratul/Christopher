@@ -4,9 +4,7 @@
         "grunt": "~0.4.0",
         "grunt-cli": "~0.1",
         "grunt-protractor-runner": "~1.2.1",
-        "protractor": "~1.7.0",
-        "protractor-reporter": "~0.1.5",
-        "protractor-utils": "~0.3.11"
+        "protractor": "~1.7.0"
     },
     "description": "Automatic booking for RAW",
     "name": "Christopher",

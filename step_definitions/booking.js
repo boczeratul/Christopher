@@ -11,7 +11,7 @@ var steps = function() {
     browser.ignoreSynchronization = true; // prevent AngularJS checking
     browser.manage().window().maximize();
     browser.get(pages[pageName]).then(function () {
-      browser.sleep(5000);
+      browser.sleep(10000);
       callback();
     });
   });
