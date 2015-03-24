@@ -1,7 +1,10 @@
 # Christopher
 
-> *“What if only a machine can defeat another machine?”*  
+> **“What if only a machine can defeat another machine?”**  
 > -Alan Turing, _The Imitation Game_
+
+### Purpose
+Book a seat at RAW, with **style**
 
 ### Clone and run the scripts
 ```bash
