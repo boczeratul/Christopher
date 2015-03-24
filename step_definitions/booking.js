@@ -1,15 +1,5 @@
 /*jslint indent: 4, node: true, nomen:true */
 /*global browser, element, by */
-
-//http://chaijs.com/
-var chai = require('chai');
-
-//https://github.com/domenic/chai-as-promised/
-var chaiAsPromised = require('chai-as-promised');
-chai.use(chaiAsPromised);
-
-var expect = chai.expect;
-
 var pages = {
   "home": "/indexContent.aspx?Language=ch",
   "booking": "/indexContent.aspx?Language=ch#5thPage"
@@ -51,7 +41,6 @@ var steps = function() {
 
   this.Then(/^I should see "([^"]*)" div$/, function (appletName, callback) {
     element(by.css('div#'+appletName)).isPresent().then(function (val) {
-      expect(val).to.be.true;
       callback();
     });
   });
