@@ -1,7 +1,7 @@
 /*jslint indent: 4, node: true, nomen:true */
 exports.config = {
     baseUrl: 'http://www.raw.com.tw',
-    seleniumAddress: 'http://192.168.33.48:4444/wd/hub',
+    seleniumAddress: 'http://10.82.62.25:4444/wd/hub',
     framework: 'cucumber',
     specs: [
         '../features'
