@@ -22,18 +22,31 @@ var steps = function() {
         });
     });
 
+    this.When(/^I cannot see loading div$/, function (callback) {
+        browser.wait(function() {
+            return browser.isElementPresent(by.css('#dvLoadingDIV[style="display: none;"]'));
+        }, 30000).then(function() {
+            callback();
+        });
+    });
+
     this.When(/^I write "([^"]*)" in "([^"]*)"$/, function (inputText, inputName, callback) {
         element(by.css('input[name='+inputName+']')).clear();
         element(by.css('input[name='+inputName+']')).sendKeys(inputText).then(callback);
     });
 
-    this.When(/^I click "([^"]*)" button$/, function (buttonName, callback) {
-        element(by.css('#'+buttonName)).click().then(callback);
+    this.When(/^I click "([^"]*)"$/, function (clickId, callback) {
+        element(by.css('#'+clickId)).click().then(callback);
     });
 
-    this.When(/^I choose option "([^"]*)" from "([^"]*)" dropdown$/, function (inputOption, dropdownName, callback) {
+    this.When(/^I choose option "([^"]*)" from "([^"]*)" dropdown \(name\)$/, function (inputOption, dropdownName, callback) {
         element(by.css('select[name="' + dropdownName + '"]')).click();
-        element(by.css('option[value="' + inputOption + '"]')).click().then(callback);
+        element(by.css('select[name="' + dropdownName + '"] option[value="' + inputOption + '"]')).click().then(callback);
+    });
+
+    this.When(/^I choose option "([^"]*)" from "([^"]*)" dropdown \(class\)$/, function (inputOption, dropdownClass, callback) {
+        element(by.css('select.' + dropdownClass)).click();
+        element(by.css('select.' + dropdownClass + ' option[value="' + inputOption + '"]')).click().then(callback);
     });
 
     this.When(/^I click "([^"]*)" for "([^"]*)" radio$/, function (inputOption, radioName, callback) {
