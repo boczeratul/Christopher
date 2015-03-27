@@ -11,8 +11,9 @@ Feature: RAW Booking
     Given I am on "booking" page
     And I can see "Panel_Booking" div
     When I choose option "2" from "DropDownList_People" dropdown
-    And I wait for "2" seconds
-    And I write "2015-04-07" in "TextBox_Date"
+    And I wait until "22" hour "22" min
+    And I write "2015-04-10" in "TextBox_Date"
+    And I wait for "100" seconds
     And I write "李玄" in "TextBox_FName"
     And I write "boczeratul@gmail.com" in "TextBox_Email"
     And I write "0939686300" in "TextBox_PNumber"

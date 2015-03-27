@@ -27,6 +27,15 @@ var steps = function() {
         element(by.css('input[name='+inputName+']')).sendKeys(inputText).then(callback);
     });
 
+    this.When(/^I wait until "([^"]*)" hour "([^"]*)" min$/, function (hour, minute, callback) {
+        browser.wait(function() {
+            var currentDate = new Date();
+            return currentDate.getHours() >= hour && currentDate.getMinutes() >= minute;
+        }, 1000000000000).then(function() {
+            callback();
+        });
+    });
+
     this.When(/^I click "([^"]*)" button$/, function (buttonName, callback) {
         element(by.css('#'+buttonName)).click().then(callback);
     });
