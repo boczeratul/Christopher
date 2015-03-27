@@ -14,10 +14,10 @@ Feature: RAW Booking
     And I wait for "2" seconds
     And I choose option "2" from "DropDownList_People" dropdown (name)
     And I cannot see loading div
-    # And I click "TextBox_Date"
-    # And I choose option "3" from "ui-datepicker-month" dropdown (class)
+    And I wait until "22" hour "22" min
     And I write "2015-04-09" in "TextBox_Date"
     And I cannot see loading div
+    And I wait for "100" seconds
     And I write "李玄" in "TextBox_FName"
     And I write "boczeratul@gmail.com" in "TextBox_Email"
     And I write "0939686300" in "TextBox_PNumber"

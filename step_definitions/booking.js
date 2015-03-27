@@ -39,6 +39,15 @@ var steps = function() {
         element(by.css('#'+clickId)).click().then(callback);
     });
 
+    this.When(/^I wait until "([^"]*)" hour "([^"]*)" min$/, function (hour, minute, callback) {
+        browser.wait(function() {
+            var currentDate = new Date();
+            return currentDate.getHours() >= hour && currentDate.getMinutes() >= minute;
+        }, 1000000000000).then(function() {
+            callback();
+        });
+    });
+
     this.When(/^I choose option "([^"]*)" from "([^"]*)" dropdown \(name\)$/, function (inputOption, dropdownName, callback) {
         element(by.css('select[name="' + dropdownName + '"]')).click();
         element(by.css('select[name="' + dropdownName + '"] option[value="' + inputOption + '"]')).click().then(callback);
