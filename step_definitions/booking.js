@@ -17,7 +17,6 @@ var steps = function() {
         browser.wait(function() {
             return browser.isElementPresent(by.css('#' + divName + '[style="display:block"]'));
         }, 30000).then(function() {
-            browser.sleep(6000);
             callback();
         });
     });
@@ -30,20 +29,25 @@ var steps = function() {
         });
     });
 
+    this.When(/^I turn into manual$/, function (callback) {
+        browser.pause();
+        // callback();
+    });
+
     this.When(/^I write "([^"]*)" in "([^"]*)"$/, function (inputText, inputName, callback) {
-        element(by.css('input[name='+inputName+']')).clear();
-        element(by.css('input[name='+inputName+']')).sendKeys(inputText).then(callback);
+        element(by.css('input[name="'+inputName+'"]')).sendKeys("\u0008\u0008\u0008\u0008\u0008");
+        element(by.css('input[name="'+inputName+'"]')).sendKeys(inputText).then(callback);
     });
 
     this.When(/^I click "([^"]*)"$/, function (clickId, callback) {
         element(by.css('#'+clickId)).click().then(callback);
     });
 
-    this.When(/^I wait until "([^"]*)" hour "([^"]*)" min$/, function (hour, minute, callback) {
+    this.When(/^I wait until "([^"]*)" hour "([^"]*)" min "([^"]*)" sec$/, function (hour, minute, second, callback) {
         browser.wait(function() {
             var currentDate = new Date();
-            return currentDate.getHours() >= hour && currentDate.getMinutes() >= minute;
-        }, 1000000000000).then(function() {
+            return currentDate.getHours() >= hour && currentDate.getMinutes() >= minute && currentDate.getSeconds() >= second;
+        }).then(function() {
             callback();
         });
     });

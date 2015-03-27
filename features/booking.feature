@@ -11,16 +11,17 @@ Feature: RAW Booking
     Given I am on "booking" page
     And I can see "Panel_Booking" div
     When I cannot see loading div
-    And I wait for "2" seconds
+    And I wait for "1" seconds
     And I choose option "2" from "DropDownList_People" dropdown (name)
     And I cannot see loading div
-    And I wait until "22" hour "22" min
-    And I write "2015-04-09" in "TextBox_Date"
+    And I wait until "12" hour "00" min "00" sec
+    And I write "04-10" in "TextBox_Date"
+    And I click "Label_RTitle"
     And I cannot see loading div
-    And I wait for "100" seconds
     And I write "李玄" in "TextBox_FName"
     And I write "boczeratul@gmail.com" in "TextBox_Email"
     And I write "0939686300" in "TextBox_PNumber"
+    And I turn into manual
     And I wait for "2" seconds
     And I write "李玄" in "TextBox_PName"
     And I write "0939686300" in "TextBox_PTel"
